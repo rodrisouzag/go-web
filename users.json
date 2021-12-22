@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "nombre" : "Rodrigo",
+        "apellido" : "Souza",
+        "email" : "rodrigo.souza@mercadolibre.com",
+        "edad" : 23,
+        "altura" : 1.68,
+        "activo" : true,
+        "fechaDeCreacion" : "2021-12-13"
+    },
+    {
+        "id": 2,
+        "nombre" : "Juan",
+        "apellido" : "Perez",
+        "email" : "juan.perez@mercadolibre.com",
+        "edad" : 30,
+        "altura" : 1.75,
+        "activo" : false,
+        "fechaDeCreacion" : "2010-10-10"
+    }
+]
