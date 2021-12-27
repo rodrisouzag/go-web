@@ -90,10 +90,13 @@ func main() {
 	router.GET("saludar/:nombre", u.Saludar())
 
 	usr := router.Group("/users")
-	usr.POST("/", u.Store())
-	usr.GET("/", u.GetAll())
 	usr.GET("/init", u.Init())
-	usr.GET("/user/:id", u.GetUser())
+	usr.GET("/", u.GetAll())
+	usr.GET("/:id", u.GetUser())
+	usr.POST("/", u.Store())
+	usr.PUT("/:id", u.Update())
+	usr.PATCH("/:id", u.UpdateApellidoYEdad())
+	usr.DELETE("/:id", u.Delete())
 
 	router.Run()
 }
