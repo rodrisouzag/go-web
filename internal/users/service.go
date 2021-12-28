@@ -7,7 +7,6 @@ import (
 )
 
 type Service interface {
-	Init(ctx context.Context) ([]domain.User, error)
 	GetAll(ctx context.Context) ([]domain.User, error)
 	Store(ctx context.Context, nombre string, apellido string, email string, edad int, altura float64, activo bool, fechaDeCreacion string) (domain.User, error)
 	GetUser(ctx context.Context, id int) (domain.User, error)
@@ -23,14 +22,6 @@ func NewService(r Repository) Service {
 	return &service{
 		repository: r,
 	}
-}
-
-func (s *service) Init(ctx context.Context) ([]domain.User, error) {
-	users, err := s.repository.Init(ctx)
-	if err != nil {
-		return nil, err
-	}
-	return users, nil
 }
 
 func (s *service) GetAll(ctx context.Context) ([]domain.User, error) {

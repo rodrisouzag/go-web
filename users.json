@@ -18,5 +18,15 @@
         "altura" : 1.75,
         "activo" : false,
         "fechaDeCreacion" : "2010-10-10"
+    },
+    {
+        "id": 3,
+        "nombre": "Maria",
+        "apellido": "Lopez",
+        "email": "maria.lopez@mercadolibre.com",
+        "edad": 30,
+        "altura": 1.5,
+        "activo": true,
+        "fechaDeCreacion": "2021-12-17"
     }
 ]

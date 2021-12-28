@@ -1,0 +1,166 @@
+definitions:
+  handler.request:
+    properties:
+      activo:
+        type: boolean
+      altura:
+        type: number
+      apellido:
+        type: string
+      edad:
+        type: integer
+      email:
+        type: string
+      fechaDeCreacion:
+        type: string
+      id:
+        type: integer
+      nombre:
+        type: string
+    type: object
+  web.Response:
+    properties:
+      code:
+        type: string
+      data: {}
+      error:
+        type: string
+    type: object
+info:
+  contact:
+    name: API Support
+    url: https://developers.mercadolibre.com.uy/support
+  description: This API Handle MELI Products.
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: https://developers.mercadolibre.com.uy/es_uy/terminos-y-condiciones
+  title: MELI Bootcamp API
+  version: "1.0"
+paths:
+  /users:
+    delete:
+      consumes:
+      - application/json
+      description: delete users
+      parameters:
+      - description: token
+        in: header
+        name: token
+        required: true
+        type: string
+      - description: User to delete
+        in: body
+        name: product
+        required: true
+        schema:
+          $ref: '#/definitions/handler.request'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.Response'
+      summary: Delete users
+      tags:
+      - Users
+    get:
+      consumes:
+      - application/json
+      description: get users
+      parameters:
+      - description: token
+        in: header
+        name: token
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.Response'
+      summary: List users
+      tags:
+      - Users
+    patch:
+      consumes:
+      - application/json
+      description: update users
+      parameters:
+      - description: token
+        in: header
+        name: token
+        required: true
+        type: string
+      - description: User to update
+        in: body
+        name: product
+        required: true
+        schema:
+          $ref: '#/definitions/handler.request'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.Response'
+      summary: Update users
+      tags:
+      - Users
+    post:
+      consumes:
+      - application/json
+      description: store users
+      parameters:
+      - description: token
+        in: header
+        name: token
+        required: true
+        type: string
+      - description: User to store
+        in: body
+        name: product
+        required: true
+        schema:
+          $ref: '#/definitions/handler.request'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.Response'
+      summary: Store users
+      tags:
+      - Users
+    put:
+      consumes:
+      - application/json
+      description: update users
+      parameters:
+      - description: token
+        in: header
+        name: token
+        required: true
+        type: string
+      - description: User to update
+        in: body
+        name: product
+        required: true
+        schema:
+          $ref: '#/definitions/handler.request'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/web.Response'
+      summary: Update users
+      tags:
+      - Users
+swagger: "2.0"

@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "nombre": "Maria",
+    "apellido": "Lopez",
+    "email": "maria.lopez@mercadolibre.com",
+    "edad": 30,
+    "altura": 1.5,
+    "activo": true,
+    "fechaDeCreacion": "2021-12-17"
+  },
+  {
+    "id": 2,
+    "nombre": "Maria",
+    "apellido": "Lopez",
+    "email": "maria.lopez@mercadolibre.com",
+    "edad": 30,
+    "altura": 1.5,
+    "activo": true,
+    "fechaDeCreacion": "2021-12-17"
+  }
+]
