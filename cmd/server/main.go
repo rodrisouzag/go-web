@@ -73,5 +73,8 @@ func main() {
 	usr.PATCH("/:id", TokenAuthMiddleware(), u.UpdateApellidoYEdad())
 	usr.DELETE("/:id", TokenAuthMiddleware(), u.Delete())
 
-	router.Run()
+	err := router.Run()
+	if err != nil {
+		log.Fatal(err)
+	}
 }

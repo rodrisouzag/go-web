@@ -48,7 +48,7 @@ func TestServiceUpdate(t *testing.T) {
 
 	result, err := service.Update(context.Background(), 1, "Rodri", "Souza", "rodri.souza@mercadolibre.com", 24, 1.68, true, "2022-01-12")
 
-	expected := domain.User{1, "Rodri", "Souza", "rodri.souza@mercadolibre.com", 24, 1.68, true, "2022-01-12"}
+	expected := domain.User{Id: 1, Nombre: "Rodri", Apellido: "Souza", Email: "rodri.souza@mercadolibre.com", Edad: 24, Altura: 1.68, Activo: true, FechaDeCreacion: "2022-01-12"}
 	assert.Equal(t, expected, result, "deben ser iguales")
 	assert.Equal(t, true, db.Mock.ReadUsed, "no se ejecuto el read")
 	assert.Nil(t, err, "error al actualizar")
