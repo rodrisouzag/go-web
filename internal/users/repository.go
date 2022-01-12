@@ -2,6 +2,7 @@ package users
 
 import (
 	"context"
+	"errors"
 	"fmt"
 
 	"github.com/rodrisouzag/go-web/internal/domain"
@@ -123,10 +124,10 @@ func (r *repository) Delete(ctx context.Context, id int) error {
 		}
 	}
 	if !deleted {
-		return fmt.Errorf("usuario %d no encontrado", id)
+		return errors.New("usuario no encontrado")
 	}
 	users = append(users[:index], users[index+1:]...)
-	fmt.Println(users)
+
 	if err := r.db.Write(users); err != nil {
 		return err
 	}
